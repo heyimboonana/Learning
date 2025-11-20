@@ -7,7 +7,7 @@ menu = {
   "fries": 2.99,
   "drink": 1.49
 }
-#BEGGINING OF CODEMD
+#BEGGINING OF CODE
 
 print("Welcome to Burger Queen!")
 print(menu)
