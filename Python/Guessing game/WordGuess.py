@@ -7,7 +7,7 @@ def pickWord():
     return word
 
 def pickNum():
-    
+    num = 0
 
 def pickMode():
     while True:
