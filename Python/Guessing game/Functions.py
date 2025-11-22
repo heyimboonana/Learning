@@ -8,7 +8,7 @@ def pickWord():
     word = r.word(include_parts_of_speech=["nouns"])
     return word
 
-def numLength():
+def pickNum():
     while True:
         numLength = input("How many digits: ")
         try:
@@ -20,11 +20,8 @@ def numLength():
                 print("Pick a number greater than 0")
         except ValueError:
             print("That's not a valid input, pick a whole number greater than 0")
-    return numLength
-
-def pickNum():
-    if NumGuessGame.numLength() == 2:
-        num = random.randrange(10,101)
+    num = random.randint(pow(10,(numLength-1)),(pow(10,numLength)))
+    return num
 
 def pickMode():
     while True:
