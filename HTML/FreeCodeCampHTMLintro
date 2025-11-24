@@ -1,4 +1,8 @@
+<!DOCTYPE html>
+<html>
+
 <h1>Welcome to freeCodeCamp</h1>
+<input>
 <h2>Full Stack Curriculum</h2>
 <p>Learn the skills to become a full stack developer</p>
 
@@ -10,3 +14,5 @@
 
 <h3>Introduction to JavaScript</h3>
 <p>JavaScript adds interactivity to a webpage</p>
+<a href ="https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/1966.png">lebon jame</a>
+</html>
