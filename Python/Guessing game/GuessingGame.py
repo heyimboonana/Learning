@@ -1,5 +1,5 @@
 import Functions
-
+#This was added from laptop
 def WordGuess():
     for i in range(tries):
         guessInput = input("\nGuess a word: ")
