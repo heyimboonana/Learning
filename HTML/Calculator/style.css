@@ -7,3 +7,11 @@ h1 {
 p {
   color: red;
 }
+
+/* Image used by the calculator script */
+.calc-image {
+  width: 300px;
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
