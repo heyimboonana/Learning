@@ -17,7 +17,7 @@ function helloPrint(){
         // use CSS class for sizing and responsiveness
         newImage.classList.add("calc-image");
         newImage.alt = "Calculator result image";
-        <!--newImage.loading = "lazy"-->;
+        newImage.loading = "lazy";
 
         imageContainer.appendChild(newImage);
     }
