@@ -20,5 +20,7 @@ function helloPrint(){
         newImage.loading = "lazy";
 
         imageContainer.appendChild(newImage);
+        document.getElementById("demo").innerHTML = "Hello world";
+
     }
 }
