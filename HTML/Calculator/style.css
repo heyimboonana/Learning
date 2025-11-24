@@ -10,8 +10,8 @@ p {
 
 /* Image used by the calculator script */
 .calc-image {
-  width: 300px;
-  height: auto;
+  width: 10000px;
+  height: 500px;
   max-width: 100%;
   display: block;
 }
