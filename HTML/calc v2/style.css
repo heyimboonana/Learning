@@ -25,10 +25,10 @@ body{
   margin-bottom: 10px;
   border-radius: 8px;
   box-sizing: border-box;
-  background-color: rgb(237, 237, 237);
+  background-color: rgb(255, 255, 255);
 }
 .buttons {
-    border-radius: 50%;
+    border-radius: 0px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
@@ -36,16 +36,23 @@ body{
     box-sizing: border-box;
     padding: 10px;
     
+
 }
-.button{
+.num{
     background-color: rgb(177, 177, 177);
 }
 .operator{
-    background-color: rgb(255, 184, 52);
+    background-color: rgb(255, 191, 71);
 }
-.button:hover{
+
+.operator:hover{
     transform: scale(1.1);
-    background-color: rgb(163, 163, 163);
+    background-color: rgb(255, 166, 0); 
+    transition: background-color 0.5s ease-in-out;
+}
+.num:hover{
+    transform: scale(1.1);
+    background-color: rgb(133, 133, 133);
     transition:background-color 0.5s ease-in-out;
 }
 
