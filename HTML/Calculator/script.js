@@ -15,4 +15,7 @@ function appendOperation(operator){
         display.value += operator;
     }
     currentOperation = operator;
+    previousInput = currentInput;
+    currentInput ='';
+    document.getElementById('display').value = `${previousInput} ${currentOperation}`;
 }
