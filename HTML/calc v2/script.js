@@ -20,15 +20,6 @@ function appendNumber(num){
 
 //opperater function
 function appendOperation(operator){
-    //if C is pressed, Clear display and make all variables blank
-    if (operator == 'C'){
-        document.getElementById('display').value = ''
-        currentOperation = '';
-        x = '';
-        y = '';
-        result = '';
-    }
-
     //if DEL is pressed, remove last character from the display and update variable
     if (operator === 'DEL'){
         const disp = document.getElementById('display').value;
@@ -43,6 +34,16 @@ function appendOperation(operator){
             x = x.slice(0,-1);
         }
     }
+
+    //if C is pressed, Clear display and make all variables blank
+    if (operator == 'C'){
+        document.getElementById('display').value = ''
+        currentOperation = '';
+        x = '';
+        y = '';
+        result = '';
+    }
+
 
     //if NEGATIVE is pressed, it will make it negative if positive and vice versa
     if (operator == 'NEGATIVE'){
