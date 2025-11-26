@@ -80,7 +80,7 @@ function appendOperation(operator){
 function calculate(){
     if (currentOperation == '+'){
         result = parseInt(x) + parseInt(y);
-        document.getElementById('display').value = "Hello World";
+        document.getElementById('display').value = result;
     }
     if (currentOperation == '-'){
         result = parseInt(x) - parseInt(y);
