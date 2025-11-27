@@ -31,7 +31,6 @@ function appendOperation(operator){
         result = ''
     }
     
-
     //if DEL is pressed, remove last character from the display and update variable
     if (operator === 'DEL'){
         const disp = document.getElementById('display').value;
