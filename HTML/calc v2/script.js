@@ -3,10 +3,14 @@ let x = '';
 let y = '';
 let result = '';
 let prevResult = '';
+let decimal = false;
 
 //Add Numbers to display and to variables depending if operater has been pressed
 function appendNumber(num){
     if (result == ''){
+        if (num == '.'){
+            decimal = true;
+        }
         if (currentOperation == ''){
             document.getElementById('display').value += num;
             x+=num
@@ -20,6 +24,14 @@ function appendNumber(num){
 
 //opperater function
 function appendOperation(operator){
+    if (result !== ''){
+        x = result;
+        currentOperation = '';
+        y = '';
+        result = ''
+    }
+    
+
     //if DEL is pressed, remove last character from the display and update variable
     if (operator === 'DEL'){
         const disp = document.getElementById('display').value;
@@ -62,7 +74,7 @@ function appendOperation(operator){
     }
 
     //update operator if numbers have been pressed 
-    else if (currentOperation == '' && currentOperation !== 'DEL' && currentOperation !== '='){
+    else if (currentOperation == '' && operator !== 'DEL' && currentOperation !== '='){
         document.getElementById('display').value += operator
         currentOperation = operator;
     }
@@ -77,21 +89,30 @@ function appendOperation(operator){
         }
     }
 }
+
 function calculate(){
+    if (decimal = true){
+        x = parseFloat(x);
+        y = parseFloat(y);
+    }
+    else{
+        x = parseInt(x);
+        y = parseInt(y)
+    }
     if (currentOperation == '+'){
-        result = parseInt(x) + parseInt(y);
+        result = (x) + (y);
         document.getElementById('display').value = result;
     }
     if (currentOperation == '-'){
-        result = parseInt(x) - parseInt(y);
+        result = (x) - (y);
         document.getElementById('display').value = result;
     }
     if (currentOperation == '*'){
-        result = parseInt(x) * parseInt(y);
+        result = (x) * (y);
         document.getElementById('display').value = result;
     }
     if (currentOperation == '/'){
-        result = parseInt(x) / parseInt(y);
+        result = (x) / (y);
         document.getElementById('display').value = result;
     }
 }
