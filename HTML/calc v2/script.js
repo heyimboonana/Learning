@@ -73,7 +73,7 @@ function appendOperation(operator){
     }
 
     //update operator if numbers have been pressed 
-    else if (currentOperation == '' && operator !== 'DEL' && currentOperation !== '='){
+    else if (currentOperation == '' && operator !== 'DEL' && operator !== '='){
         document.getElementById('display').value += operator
         currentOperation = operator;
     }
