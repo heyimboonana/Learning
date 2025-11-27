@@ -28,7 +28,8 @@ function appendOperation(operator){
         x = result;
         currentOperation = '';
         y = '';
-        result = ''
+        result = '';
+        decimal = false;
     }
     
     //if DEL is pressed, remove last character from the display and update variable
