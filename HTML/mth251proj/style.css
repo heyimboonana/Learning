@@ -10,7 +10,11 @@ header {
     background: #333;
     color: white;
 }
-
+#myPlot {
+    width: 80%; 
+    height: 80% auto;
+    margin: 0 auto;
+}
 #section {
     background: white;
     margin: 35px auto;

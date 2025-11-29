@@ -1,12 +1,12 @@
     let xValues = [];
     let yValues = [];
-    let length = 5;
+    let length = 10;
 
     const expression = "x - Math.sin(x)";
     let xva = document.getElementById('graphInput').value
-    for (let x = 0; x <= document.getElementById('graphInput').value; x += 0.1) {
+    for (let x = -length; x <= length; x += 0.1) {
         xValues.push(x);
-        yValues.push(eval(expression)); // Using eval for demonstration, consider safer alternatives for user input
+        yValues.push(eval(expression));
     }
         const data = [{
         x: xValues,
@@ -18,4 +18,3 @@
         title: "Graph of y = x - sin(x)"
     };
     Plotly.newPlot("myPlot", data, layout);
-
