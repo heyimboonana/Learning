@@ -16,7 +16,7 @@
                 <h2>by Osvaldo Hernandez</h2>
             </header>
             <section>
-                <label for="graphInput">Range: </label>
+                <label for="graphInput">Range (change X-axis): </label>
                 <input type="range" id="graphInput" min="1" max="51" step="10">
             <div id="myPlot"></div>
 
@@ -24,8 +24,8 @@
             
             <section id="section">
                 <h2 class="subhead">Function family</h2>
-                <p>Function is a linear - trigonometric, or it could also be refered as a sinusodial function</p>
-                <img src="assets/desmos-graph.png" style="width:500px;height:500px;">
+                <p>Function is a linear minus trigonometric, or it could also be refered as a sinusodial function with the parent function being <b>Sin(x)</b></p>
+                <img src="assets/desmos-graph.png" style="width: 50% ;height:50%;">
             </section>
 
             <section id="section">
@@ -39,7 +39,10 @@
 
             <section id="section">
                 <h2 class="subhead">Equation of Tangent line</h2>
-                <p>y - </p>
+                <p><em><b>x = 1: </b></em>y - (1 - sin(1)) = (1 - cos(x)) (x - 1)</p>
+                <p><em><b>≈ </b></em>y - 0.1585 = (1 - cos(x)) (x - 1)</p><br>
+                <p><em><b>x = 2: </b></em>y - (2 - sin(2)) = (1 - cos(x))(x - 2)</p>
+                <p><em><b>≈ </b></em>y - 1.0907 = (1 - cos(x)) (x - 1)</p>
             </section>
 
             <section id="section">
@@ -54,8 +57,10 @@
 
             <section id="section">
                 <h2 class="subhead">Interesting features</h2>
+                <p>1. After the second derivative, the derivatives become derivatives of eachother since f '(x) = sin(x) is cos(x), and f '(x) = cos(x) is -sin(x)</p>
+                <p>2. The derivative of the function is periodic meaning that the function will repeat it's y values at certain values. For sin(x), every 2π will result in the same values.</p>
+                <p>3. This function is </p>
             </section>
-            
         </main>
         <script src="script.js" async defer></script>
     </body>

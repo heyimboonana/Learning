@@ -2,6 +2,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: #f4f4f4;
+    text-align: center;
 }
 
 header {
@@ -11,16 +12,19 @@ header {
     color: white;
 }
 #myPlot {
-    width: 80%; 
-    height: 80% auto;
+    width: 60%; 
+    height: 600px;
     margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 8px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    padding: 5px;
 }
 #section {
-    background: white;
-    margin: 35px auto;
+    background: rgb(255, 255, 255);
+    margin: 55px auto;
     padding: 15px;
-    width: 70%;
+    width: 60%;
     border-radius: 10px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.25);
-    text-align: center;
+    box-shadow: 0 0 8px rgba(0,0,0,0.3);
 }
