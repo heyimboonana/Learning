@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family:sans-serif;
     background: #f4f4f4;
     text-align: center;
 }
@@ -8,7 +8,7 @@ body {
 header {
     text-align: center;
     padding: 20px;
-    background: #333;
+    background: #4457ff;
     color: white;
 }
 #myPlot {
@@ -26,9 +26,5 @@ header {
     padding: 15px;
     width: 60%;
     border-radius: 10px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.3);
-}
-image{
-    width: 50%;
-    height: 50%;
+    box-shadow: 0 0 8px rgba(208, 0, 255, 0.3);
 }
