@@ -15,12 +15,14 @@
                 <h1>MTH 251H Function Project f(x)=x - sin(x)</h1>
                 <h2>by Osvaldo Hernandez</h2>
             </header>
+
+
             <section>
                 <label for="graphInput">Range (change X-axis): </label>
                 <input type="range" id="graphInput" min="1" max="51" step="10">
-            <div id="myPlot"></div>
-
+                <div id="myPlot"></div>
             </section>
+            
             
             <section id="section">
                 <h2 class="subhead">Function family</h2>
@@ -30,8 +32,8 @@
 
             <section id="section">
                 <h2 class="subhead">Characteristics</h2>
-                <p class="Characteristics">Domain: All real numbers</p>
-                <p class="Characteristics">Range: All real numbers</p>
+                <p class="Characteristics"><b>Domain</b>: All real numbers</p>
+                <p class="Characteristics"><b>Range</b>: All real numbers</p>
                 <p class="Characteristics">y-int: 0</p>
                 <p class="Characteristics">x-int: 0</p>
                 <p class="Characteristics">Asymptotes: No Asymptotes</p> 
@@ -48,7 +50,15 @@
             <section id="section">
                 <h2 class="subhead">Derivatives</h2>
                 <p><b>First Derivative: </b>f ' (x) = 1 - cos(x) </p>
-                <p><b>f ' (x) </b> tells us that the function is increasing the whole time,(-infinity, infinity), and the critical points happens at periodic intervals of 2π * x </p>
+                <p><b>f ' (x) </b> tells us that the function is increasing the whole time,(-infinity, infinity), and the critical points happens at periodic intervals of 2π * x </p><br>
+                <label for="firstDerivativeTest" style="color: rgb(255, 0, 100);">Input value to calculate if theres a critical point:</label>
+                <input type="number" id="firstDerivativeTest" onclick="calcFirstDerivative" name="firstDerivativeTest" placeholder="(only enter number)"></button>
+                <div id="firstDerResult"></div>
+                <div id="CriticalPoint"><b id="criticalPointValue"> </b></div><br>
+                <img id="resultImg" src=" " style="width: 25% ;height:25%;">
+                <img id="resultGraph" src=" " style="width: 25% ;height:25%;">
+
+
                 <p><b>Second Derivative: </b>f ' ' (x) = sin(x)</p>
                 <p><b>f ' ' (x) </b> tells us that the concavity happens at intervals</p>
                 <p> Concave Up: sin(5π/2) = 1 > 0</p>
