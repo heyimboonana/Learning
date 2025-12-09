@@ -29,6 +29,7 @@ plotGraph(10);
 document.getElementById('graphInput').addEventListener('change', function() {
     plotGraph(this.value);
 })
+
 if (document.getElementById("firstDerivativeTest") !== ''){
     const myinput = document.getElementById("firstDerivativeTest");
     myinput.addEventListener("keypress", function(event) {
@@ -54,4 +55,5 @@ if (document.getElementById("firstDerivativeTest") !== ''){
         }
     })
 }
+
 ;
