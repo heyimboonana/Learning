@@ -1,3 +1,15 @@
+// Handle motion checkbox to stop/start animations
+const motionCheckbox = document.getElementById("motionCheckbox");
+const bodyElement = document.body;
+
+motionCheckbox.addEventListener("change", function() {
+    if (this.checked) {
+        bodyElement.classList.remove("stop-animations");
+    } else {
+        bodyElement.classList.add("stop-animations");
+    }
+});
+
 const expression = "x - Math.sin(x)";
 
 function plotGraph(length) {
