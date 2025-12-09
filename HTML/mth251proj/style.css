@@ -1,8 +1,42 @@
 body {
     margin: 0;
-    font-family:sans-serif;
+    font-family:"Comic Sans MS", "Comic Sans", cursive, sans-serif;
     background: #f4f4f4;
     text-align: center;
+}
+@keyframes bgcolor {
+  0% { background-color: #ff0000; } /* Red */
+  25% { background-color: #00ff00; } /* Green */
+  50% { background-color: #0000ff; } /* Blue */
+  75% { background-color: #ffff00; } /* Yellow */
+  100% { background-color: #ff0000; } /* Back to Red */
+}
+
+body {
+  animation: bgcolor 10s infinite alternate; /* 10s duration, infinite loop, alternates direction */
+}
+
+  .wiggle-text {
+    display: inline-block; /* Important for transform to work correctly on inline elements */
+    animation: wiggle 1s infinite alternate; /* Apply the animation */
+    
+  }
+
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes textgrowth {
+    0% {
+        font-size: 10px;
+    }
+    100% {
+        font-size: 20px;
+    }
 }
 
 header {
@@ -10,7 +44,11 @@ header {
     padding: 20px;
     background: #4457ff;
     color: white;
+    display: inline-block;
+    animation: wiggle 1s infinite alternate, textgrowth 2s infinite alternate;
+    font-size: 10px;
 }
+    
 #myPlot {
     width: 60%; 
     height: 600px;
@@ -27,4 +65,5 @@ header {
     width: 60%;
     border-radius: 10px;
     box-shadow: 0 0 8px rgba(208, 0, 255, 0.3);
+    
 }
