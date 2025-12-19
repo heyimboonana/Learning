@@ -1,1 +1,1 @@
-This repostitorie is for simple and small project I worked on while learning code
+This repository is for simple and small projects I worked on to practice coding
