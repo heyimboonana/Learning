@@ -11,6 +11,6 @@ int main() {
     cout << "Pick the secong number:";
     cin >> y;
 
-    cout <<
+    cout << x + y;
     return 0;
 } 
