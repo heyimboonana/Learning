@@ -26,7 +26,7 @@ int main() {
     cout << "GPA: " << student2.gpa << "\n\n";
 
     cout << "GPA average of class:" << "\n";
-    cout << (student1.gpa + student2.gpa) / 2;
+    cout << (student1.gpa + student2.gpa) / 2 << "\n\n";
 
     return 0;
 } 
