@@ -1,20 +1,17 @@
 #include <iostream>
 #include <cstdlib>
 #include <limits>
-int tries = 1;
 
-void check(int num, int random){
+void check(int num, int random, int tries){
         if(num == random){
             std::cout << "CORRECT!" << "\n";
             std::cout<< "Tries: " << tries;
         }
         else if(num > random){
-            tries++;
             std::cout << "Lower" << "\n";
             std::cout << "Guess:";
         }
         else if(num < random){
-            tries++;
             std::cout << "Higher" << "\n";
             std::cout << "Guess:";
         }
@@ -24,6 +21,7 @@ int main(){
     srand(time(0));
     int random = rand() % 100 + 1;
     int guess;
+    int tries = 0;
 
     //std::cout << "Random: " << random << "\n";
     std::cout << "Enter a guess: ";
@@ -37,7 +35,8 @@ int main(){
                 
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         }
-        check(guess, random);
+        tries++;
+        check(guess, random, tries);
     }
     return 0;
 }
