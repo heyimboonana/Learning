@@ -3,19 +3,19 @@
 #include <limits>
 
 void check(int num, int random, int tries){
-        if(num == random){
-            std::cout << "CORRECT!" << "\n";
-            std::cout<< "Tries: " << tries;
-        }
-        else if(num > random){
-            std::cout << "Lower" << "\n";
-            std::cout << "Guess:";
-        }
-        else if(num < random){
-            std::cout << "Higher" << "\n";
-            std::cout << "Guess:";
-        }
+    if(num == random){
+        std::cout << "CORRECT!" << "\n";
+        std::cout<< "Tries: " << tries;
     }
+    else if(num > random){
+        std::cout << "Lower" << "\n";
+        std::cout << "Guess:";
+    }
+    else if(num < random){
+        std::cout << "Higher" << "\n";
+        std::cout << "Guess:";
+    }
+}
 
 int main(){
     srand(time(0));
