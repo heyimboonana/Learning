@@ -3,7 +3,7 @@
 #include <limits>
 int tries = 1;
 
-void check(int num, int& random){
+void check(int num, int random){
         if(num == random){
             std::cout << "CORRECT!" << "\n";
             std::cout<< "Tries: " << tries;
