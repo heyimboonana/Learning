@@ -3,20 +3,14 @@
 #include <string>
 
 //EQUATION FUNCTION
-int equation(int num1, int num2, std::string operation){
-    if(operation == "+"){
-        return num1 + num2;
+int equation(int num1, int num2, char operation) {
+    switch(operation) {
+        case '+': return num1 + num2;
+        case '-': return num1 - num2;
+        case '*': return num1 * num2;
+        case '/': return num2 != 0 ? num1 / num2 : 0; // avoid division by zero
+        default: return 0;
     }
-    else if(operation == "-"){
-        return num1 - num2;
-    }
-    else if(operation == "*"){
-        return num1 * num2;
-    }
-    else if(operation == "/"){
-        return num1 / num2;
-    }
-    return 0;
 }
 
 //MAIN
@@ -24,7 +18,6 @@ int main(){
     int num1;
     int num2;
     int sum;
-    int prev;
     bool calcStart = true;
 
     //INPUT NUMS
@@ -40,13 +33,13 @@ int main(){
     }
     std::cout << num1 << " ( ) _ " << "\n";
     while(true){
-        std:: string operation = ".";
+        char operation = '.';
 
         //CHECK OPERATION
-        while(!(operation == "+" || operation == "-" || operation == "*" || operation == "/")){
+        while(!(operation == '+' || operation == '-' || operation == '*' || operation == '/')){
             std::cout << "(ENTER '-1' TO END)Enter an operation (+, -, *, / ): ";
             std::cin >> operation;
-            if(operation == "-1"){
+            if(operation == '-1'){
                 return 0;
             }
         }
