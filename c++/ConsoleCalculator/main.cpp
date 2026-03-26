@@ -24,33 +24,45 @@ int main(){
     int num1;
     int num2;
     int sum;
-    
+    int prev;
+    bool calcStart = true;
+
+    //INPUT NUMS
+    std:: cout << "(PRESS 'S' TO STOP)Enter the first number: ";
+
+    while(!(std::cin >> num1)){
+        std:: cout << "(PRESS 'S' TO STOP)Invalid, enter a number: ";
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    }
+    if(num1 == -1){
+        return 0;
+    }
+    std::cout << num1 << " ( ) _ " << "\n";
     while(true){
         std:: string operation = ".";
-        //INPUT NUMS
-        std:: cout << "(PRESS 'S' TO STOP)Enter the first number: ";
-        while(!(std::cin >> num1)){
-            std:: cout << "(PRESS 'S' TO STOP)Invalid, enter a number: ";
-            std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        }
+
         //CHECK OPERATION
         while(!(operation == "+" || operation == "-" || operation == "*" || operation == "/")){
-            std::cout << "(PRESS 'S' TO STOP)Enter an operation (+, -, *, / ): ";
+            std::cout << "(ENTER '-1' TO END)Enter an operation (+, -, *, / ): ";
             std::cin >> operation;
-            if(operation == "S"){
+            if(operation == "-1"){
                 return 0;
             }
         }
-        std:: cout << "(PRESS 'S' TO STOP)Enter the second number: ";
+        std::cout << num1 << " " << operation <<" _ " << "\n";
+        std:: cout << "(ENTER '-1' TO END)Enter the second number: ";
         while(!(std::cin >> num2)){
-            std:: cout << "(PRESS 'S' TO STOP)Invalid, enter a number: ";
+            std:: cout << "(ENTER '-1' TO END)Invalid, enter a number: ";
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         }
+        if(num2 == -1){
+            return 0;
+        }
         sum = equation(num1, num2, operation);
-        std:: cout << "Sum: " << sum << "\n";
-
+        std:: cout << num1 << " " << operation << " " << num2 << " = " << sum << "\n";
+        num1 = sum;
     }
     return 0;
 }
