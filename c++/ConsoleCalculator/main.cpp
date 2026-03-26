@@ -21,31 +21,30 @@ int equation(int num1, int num2, std::string operation){
 
 //MAIN
 int main(){
-    std:: string operation;
     int num1;
     int num2;
     int sum;
     
     while(true){
-        //CHECK OPERATION
-        while(!(operation == "+" || operation == "-" || operation == "*" || operation == "/")){
-            std::cout << "(PRESS ENTER TO STOP)Enter an operation (+, -, *, / ): ";
-            std::getline(std::cin, operation);
-            ///std::cin >> operation;
-            if(operation.empty()){
-                return 0;
-            }
-        }
+        std:: string operation = ".";
         //INPUT NUMS
-        std:: cout << "(PRESS ENTER TO STOP)Enter the first number: ";
+        std:: cout << "(PRESS 'S' TO STOP)Enter the first number: ";
         while(!(std::cin >> num1)){
-            std:: cout << "(PRESS ENTER TO STOP)Invalid, enter a number: ";
+            std:: cout << "(PRESS 'S' TO STOP)Invalid, enter a number: ";
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         }
-        std:: cout << "(PRESS ENTER TO STOP)Enter the second number: ";
+        //CHECK OPERATION
+        while(!(operation == "+" || operation == "-" || operation == "*" || operation == "/")){
+            std::cout << "(PRESS 'S' TO STOP)Enter an operation (+, -, *, / ): ";
+            std::cin >> operation;
+            if(operation == "S"){
+                return 0;
+            }
+        }
+        std:: cout << "(PRESS 'S' TO STOP)Enter the second number: ";
         while(!(std::cin >> num2)){
-            std:: cout << "(PRESS ENTER TO STOP)Invalid, enter a number: ";
+            std:: cout << "(PRESS 'S' TO STOP)Invalid, enter a number: ";
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         }
