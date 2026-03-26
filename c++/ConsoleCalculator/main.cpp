@@ -21,12 +21,7 @@ int getNum (){
         std::cin.clear();
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     }
-    if(num == -1){
-        return -1;
-    }
-    else{
-        return num;
-    }
+    return num;
 }
 
 //GET OPERATION
