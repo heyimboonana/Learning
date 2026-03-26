@@ -17,7 +17,7 @@ int equation(int num1, int num2, char operation) {
 int getNum (){
     int num;
     while(!(std::cin >> num)){
-        std:: cout << "(PRESS 'S' TO STOP)Invalid, enter a number: ";
+        std:: cout << "(PRESS '-1' TO STOP)Invalid, enter a number: ";
         std::cin.clear();
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     }
